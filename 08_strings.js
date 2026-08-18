@@ -71,3 +71,68 @@ console.log(carManufacturer.includes("a"));
 // split
 
 console.log(email.split("@"))
+
+
+// +++++++++++++++++++++++ Reverse string +++++++++++++++++++
+
+// Bit complicated logic
+
+let a = "ABC"
+
+// find last index of the string
+// store in a variable
+
+let lastIndex = a.indexOf(a.at(-1)); // .at() takes integer and returns value of that index
+console.log("Last index of the string: ",lastIndex);
+
+// a.at(-1) returns last character C. 
+// a.indexOf("C") returns index position of the C and stores in variable.
+// now lastIndex stores last index value of the string.
+
+
+//loop to fetch each character of the string
+
+let arr = []
+
+for (lastIndex; lastIndex>=0; lastIndex--){
+    let charFetched = a[lastIndex] 
+    // collect each character in an array so array declared
+    arr.push(charFetched)
+}
+console.log(arr);
+
+
+
+// Simple Logic
+
+// Method 1:
+
+// find the length of the string
+let stringLength = a.length
+
+let secondArray = []
+
+for(stringLength; stringLength>0; stringLength--){
+    let charFetched = a[stringLength-1] // max index = 2, length = 3. To make length == index subtract 1 from legnth
+    secondArray.push(charFetched)
+    
+}
+console.log(secondArray);
+
+
+// Method 2:
+
+// find the length of the string
+let thestringLength = a.length
+let theLastIndex = thestringLength-1 // max index = 2, length = 3. To make length == index subtract 1 from legnth
+let thirdArray = []
+
+
+
+for(theLastIndex; theLastIndex>=0; theLastIndex--){
+    let thecharFetched = a[theLastIndex]
+    
+    thirdArray.push(thecharFetched)
+    
+}
+console.log(thirdArray);
