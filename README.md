@@ -1,2 +1,2 @@
-# javascript-fundamentals
+# 01-javascript-fundamentals
 My notes and practice code while learning JavaScript fundamentals.
