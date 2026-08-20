@@ -45,14 +45,14 @@ const lastName = email.slice(lastNameindex,domainIndex)
 
 let b = "ABC"
 
-let lastIndex = b.indexOf(b.at(-1))
+let finalIndex = b.indexOf(b.at(-1))
 let arr = [];
-for(let iP = lastIndex; iP >=0; iP--){
+for(let iP = finalIndex; iP >=0; iP--){
      arr.push((b.at(iP)))
 }
 
 console.log(arr)
-console.log("Total Characters of this array are: ",lastIndex+1)
+console.log("Total Characters of this array are: ",finalIndex+1)
 
 // Trim
 let city = " Lahore  ";
@@ -79,28 +79,12 @@ console.log(email.split("@"))
 
 let a = "ABC"
 
-// find last index of the string
-// store in a variable
-
 let lastIndex = a.indexOf(a.at(-1)); // .at() takes integer and returns value of that index
 console.log("Last index of the string: ",lastIndex);
 
 // a.at(-1) returns last character C. 
 // a.indexOf("C") returns index position of the C and stores in variable.
 // now lastIndex stores last index value of the string.
-
-
-//loop to fetch each character of the string
-
-let arr = []
-
-for (lastIndex; lastIndex>=0; lastIndex--){
-    let charFetched = a[lastIndex] 
-    // collect each character in an array so array declared
-    arr.push(charFetched)
-}
-console.log(arr);
-
 
 
 // Simple Logic
@@ -117,7 +101,7 @@ for(stringLength; stringLength>0; stringLength--){
     secondArray.push(charFetched)
     
 }
-console.log(secondArray);
+console.log(secondArray.join());
 
 
 // Method 2:
@@ -135,4 +119,4 @@ for(theLastIndex; theLastIndex>=0; theLastIndex--){
     thirdArray.push(thecharFetched)
     
 }
-console.log(thirdArray);
+console.log(thirdArray.join());
