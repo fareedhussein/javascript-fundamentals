@@ -1,35 +1,121 @@
-const acc_id = 3; 
-let email = "fareed@xyz.com"; 
-var pass = "12345";
-city = "Lahore"; // global variable
-let acc_state;
 
-// acc_id = 0; // not allowed
-email = "random@abc.com";
-pass = "21212";
-city = "London";
-console.table([acc_id,email,pass,city,acc_state]);
+/*
+global variable: declared outside of all functions and blocks
+Outermost scope of the program  
+*/
 
 
+carManufacturer = "Black" // implicit global, means crash if used under "use strict"
 
-var a = 2;
 
-// postfix increment
+// +++++++++++++++++++++++++++++  var  +++++++++++++++++++++++++++++
 
-for (let i = 0; i<=10; i++){
-    a++;
-    console.log("iteration ", i , "output: ", a)
+
+// var scope: function, not block
+
+if (true) {
+    var myName = "Fareed"
+    var haveCar = true 
+    
+    if (haveCar === true){
+        var carModel = "740e"
+        var carColor = "Metallic"
+    }
+
+}
+console.table([myName,carModel,carColor])
+
+
+
+var yourScore = 5
+function test() {
+    var myScore = 10;
+    console.log("Your score is: ",yourScore)
+}
+test()
+// var declared outside function can be accessed inside.
+// console.log(myScore)  // won't print, function-scoped.
+
+
+
+
+
+// var variables can be redeclared
+var x = 10;
+var x = 20;
+
+console.log(x)
+
+// var variables can be re-assigned
+var y = 30
+y = 50
+
+console.log(y)
+
+
+// +++++++++++++++++++++++++++++  let  +++++++++++++++++++++++++++++
+
+// let is block scoped
+if (true){
+    let isLoggedIn = true;
 }
 
-// console.log(i) // can't print i, let is block scoped
-// console.log(a) // a gives output, var is global
+// console.log(isLoggedIn); // not prints, let is block scoped
 
-let b = 2
+
+// let variables can be re-assigned
+let m = 1
+m = 2
+console.log(m)
+
+// +++++++++++++++++++++++++++++  const  +++++++++++++++++++++++++++++
+
+// const is block scoped
+// const variables cannot be reassigned after initialization
+
+/*
+const i = 0
+for (i = 0; i <= 3; i++){
+    console.log(i)
+}
+*/
+
+
+// +++++++++++++++++++++++++++++  Prefix and Postfix (inc,dec)  +++++++++++++++++++++++++++++
+
+// postfix increment
+let a = 1;
+let b = a++     // first: b stores 'a' THEN: 'a' gets increment
+console.log(a)
+console.log(b)
 
 // prefix increment
 
-for (let i = 0; i<=10; i++){
-    ++b;
-    console.log("iteration: ",i,"output: ",b);
-    
+let c = 1
+let d = ++c     // first: 'c' gets incremented THEN: 'd' stores c
+console.log(d)
+
+
+
+
+
+// prefix and postfix increment in for loop
+let e = 1
+for (let i = 0; i <= 4; i++){
+
+    console.log("postfix increment:\n", 
+        "iteration: ",i,"output: ",e)
+    e++
 }
+
+// prefix increment in for loop
+let f = 2
+for (let i = 0; i<=4; i++){
+    console.log("prefix increment:\n",
+        "iteration: ",i,"output: ",f);
+    ++f;
+}
+
+
+// prefix and postfix increment in loop give identical output
+// loop checks the condition, executes and then increment or decrement.
