@@ -12,7 +12,7 @@ console.log(0 <= 1 );
 // AVOID BELOW COMPARISONS
 
 console.log(null > 0); 
-console.log(null == 0); // equality operator does NOT convert null to a number
+console.log("loose comparision compares value: null == 0 is  ", null == 0); // equality operator does NOT convert null to a number
 console.log(null >= 0); 
 
 /**
